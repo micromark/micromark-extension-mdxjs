@@ -7,7 +7,7 @@ import md from 'micromark-extension-mdx-md'
 import esm from 'micromark-extension-mdxjs-esm'
 
 export function mdxjs(options) {
-  var settings = Object.assign(
+  const settings = Object.assign(
     {
       acorn: Parser.extend(acornJsx()),
       acornOptions: {ecmaVersion: 2020, sourceType: 'module'},
