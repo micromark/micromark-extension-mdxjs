@@ -14,11 +14,10 @@ Use [`micromark-extension-mdx`][mdx] instead to support MDX agnostic to JS.
 This package provides the low-level modules for integrating with the micromark
 tokenizer but has no handling of compiling to HTML: go to a syntax tree instead.
 
-You probably should use this package with [`mdast-util-mdx`][mdast-util-mdx]
-(**[mdast][]**) or alternatively use both through [`remark-mdx`][remark-mdx]
-(**[remark][]**).
+## When to use this
 
-The extensions can be used separately:
+You should probably use this package.
+If you don’t need all of MDX.js, the extensions can be used separately:
 
 *   [`micromark/micromark-extension-mdx-expression`][mdx-expression]
     — support MDX (or MDX.js) expressions
@@ -42,24 +41,41 @@ npm install micromark-extension-mdxjs
 
 ## Use
 
-See [`mdast-util-mdx`][mdast-util-mdx] for an example.
+```js
+import {micromark} from 'micromark'
+import {mdxjs} from 'micromark-extension-mdxjs'
+
+const output = micromark('import a from "b"\n\na <b /> c {1 + 1} d', {
+  extensions: [mdxjs()]
+})
+
+console.log(output)
+```
+
+Yields:
+
+```html
+<p>a  c  d</p>
+```
+
+…which is rather useless: go to a syntax tree with
+[`mdast-util-from-markdown`][from-markdown] and
+[`mdast-util-mdx`][mdast-util-mdx] instead.
 
 ## API
 
 This package exports the following identifiers: `mdxjs`.
 There is no default export.
 
-### `mdxjs(options)`
+### `mdxjs(options?)`
 
-Support MDX.js.
-
-The export is a function that can be called to return an extension for the
-micromark parser (to tokenize MDX; can be passed in `extensions`).
+A function that can be called with options that returns an extension for
+micromark to parse MDX.js (can be passed in `extensions`).
 
 ##### `options`
 
 Options are the same as for `mdx-expression`, `mdx-jsx`, and `mdxjs-esm`, but
-come predefined to support JS inside MDX.
+come predefined to support JavaScript.
 
 ###### `options.acorn`
 
@@ -149,10 +165,6 @@ abide by its terms.
 
 [micromark]: https://github.com/micromark/micromark
 
-[remark]: https://github.com/remarkjs/remark
-
-[mdast]: https://github.com/syntax-tree/mdast
-
 [mdx]: https://github.com/micromark/micromark-extension-mdx
 
 [mdx-expression]: https://github.com/micromark/micromark-extension-mdx-expression
@@ -167,4 +179,4 @@ abide by its terms.
 
 [acorn]: https://github.com/acornjs/acorn
 
-[remark-mdx]: https://github.com/mdx-js/mdx/tree/next/packages/remark-mdx
+[from-markdown]: https://github.com/syntax-tree/mdast-util-from-markdown
