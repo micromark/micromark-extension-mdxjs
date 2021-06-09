@@ -1,16 +1,16 @@
-var test = require('tape')
-var micromark = require('micromark')
-var syntax = require('.')
+import test from 'tape'
+import {micromark} from 'micromark'
+import {mdxjs} from './index.js'
 
 test('markdown -> html (micromark)', function (t) {
   t.deepEqual(
-    micromark('<div>\n{asd}\n</div>', {extensions: [syntax()]}),
+    micromark('<div>\n{asd}\n</div>', {extensions: [mdxjs()]}),
     '\n\n',
     'should work'
   )
 
   t.deepEqual(
-    micromark('<x {...{"{": 1}} />\n{1 + /*}*/ + 2}', {extensions: [syntax()]}),
+    micromark('<x {...{"{": 1}} />\n{1 + /*}*/ + 2}', {extensions: [mdxjs()]}),
     '\n',
     'should be gnostic'
   )

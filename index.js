@@ -1,21 +1,25 @@
-var acorn = require('acorn')
-var acornJsx = require('acorn-jsx')
-var combine = require('micromark/dist/util/combine-extensions')
-var expression = require('micromark-extension-mdx-expression')
-var jsx = require('micromark-extension-mdx-jsx')
-var md = require('micromark-extension-mdx-md')
-var esm = require('micromark-extension-mdxjs-esm')
+import {Parser} from 'acorn'
+import acornJsx from 'acorn-jsx'
+import {combineExtensions} from 'micromark-util-combine-extensions'
+import expression from 'micromark-extension-mdx-expression'
+import jsx from 'micromark-extension-mdx-jsx'
+import md from 'micromark-extension-mdx-md'
+import esm from 'micromark-extension-mdxjs-esm'
 
-module.exports = create
-
-function create(options) {
+export function mdxjs(options) {
   var settings = Object.assign(
     {
-      acorn: acorn.Parser.extend(acornJsx()),
+      acorn: Parser.extend(acornJsx()),
       acornOptions: {ecmaVersion: 2020, sourceType: 'module'},
       addResult: true
     },
     options
   )
-  return combine([esm(settings), expression(settings), jsx(settings), md])
+
+  return combineExtensions([
+    esm(settings),
+    expression(settings),
+    jsx(settings),
+    md
+  ])
 }
