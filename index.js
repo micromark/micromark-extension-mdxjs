@@ -4,7 +4,6 @@
  */
 
 import {Parser} from 'acorn'
-// @ts-expect-error: untyped
 import acornJsx from 'acorn-jsx'
 import {combineExtensions} from 'micromark-util-combine-extensions'
 import {mdxExpression} from 'micromark-extension-mdx-expression'
