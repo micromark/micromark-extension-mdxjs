@@ -113,7 +113,7 @@ Yields:
 
 ## API
 
-This package exports the identifiers [`mdxjs`][api-mdxjs].
+This package exports the identifier [`mdxjs`][api-mdxjs].
 There is no default export.
 
 The separate extensions support the [`development` condition][development].
