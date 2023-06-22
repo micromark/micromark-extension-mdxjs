@@ -77,14 +77,14 @@ npm install micromark-extension-mdxjs
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {mdxjs} from 'https://esm.sh/micromark-extension-mdxjs@1'
+import {mdxjs} from 'https://esm.sh/micromark-extension-mdxjs@2'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {mdxjs} from 'https://esm.sh/micromark-extension-mdxjs@1?bundle'
+  import {mdxjs} from 'https://esm.sh/micromark-extension-mdxjs@2?bundle'
 </script>
 ```
 
