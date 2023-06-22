@@ -34,6 +34,6 @@ export function mdxjs(options) {
     mdxjsEsm(settings),
     mdxExpression(settings),
     mdxJsx(settings),
-    mdxMd
+    mdxMd()
   ])
 }
