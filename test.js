@@ -1,13 +1,12 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {micromark} from 'micromark'
-import {mdxjs} from './index.js'
+import {mdxjs} from 'micromark-extension-mdxjs'
 
 test('markdown -> html (micromark)', async function (t) {
   await t.test('should expose the public api', async function () {
     assert.deepEqual(
-      // To do: next major: use export map, use package name here.
-      Object.keys(await import('./index.js')).sort(),
+      Object.keys(await import('micromark-extension-mdxjs')).sort(),
       ['mdxjs']
     )
   })
