@@ -34,10 +34,10 @@
   "dependencies": {
     "acorn": "^8.0.0",
     "acorn-jsx": "^5.0.0",
-    "micromark-extension-mdx-expression": "^2.0.0",
-    "micromark-extension-mdx-jsx": "^2.0.0",
+    "micromark-extension-mdx-expression": "^3.0.0",
+    "micromark-extension-mdx-jsx": "^3.0.0",
     "micromark-extension-mdx-md": "^2.0.0",
-    "micromark-extension-mdxjs-esm": "^2.0.0",
+    "micromark-extension-mdxjs-esm": "^3.0.0",
     "micromark-util-combine-extensions": "^2.0.0",
     "micromark-util-types": "^2.0.0"
   },
