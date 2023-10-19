@@ -24,7 +24,7 @@ export function mdxjs(options) {
   const settings = Object.assign(
     {
       acorn: Parser.extend(acornJsx()),
-      acornOptions: {ecmaVersion: 2023, sourceType: 'module'},
+      acornOptions: {ecmaVersion: 2024, sourceType: 'module'},
       addResult: true
     },
     options
