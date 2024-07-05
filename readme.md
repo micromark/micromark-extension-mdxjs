@@ -12,22 +12,22 @@
 
 ## Contents
 
-*   [What is this?](#what-is-this)
-*   [When to use this](#when-to-use-this)
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-    *   [`mdxjs(options?)`](#mdxjsoptions)
-    *   [`Options`](#options)
-*   [Authoring](#authoring)
-*   [Syntax](#syntax)
-*   [Errors](#errors)
-*   [Types](#types)
-*   [Compatibility](#compatibility)
-*   [Security](#security)
-*   [Related](#related)
-*   [Contribute](#contribute)
-*   [License](#license)
+* [What is this?](#what-is-this)
+* [When to use this](#when-to-use-this)
+* [Install](#install)
+* [Use](#use)
+* [API](#api)
+  * [`mdxjs(options?)`](#mdxjsoptions)
+  * [`Options`](#options)
+* [Authoring](#authoring)
+* [Syntax](#syntax)
+* [Errors](#errors)
+* [Types](#types)
+* [Compatibility](#compatibility)
+* [Security](#security)
+* [Related](#related)
+* [Contribute](#contribute)
+* [License](#license)
 
 ## What is this?
 
@@ -50,14 +50,14 @@ include Rust or variables or whatnot, use
 
 Alternatively, you can also use the underlying syntax extensions separately:
 
-*   [`micromark-extension-mdx-expression`][micromark-extension-mdx-expression]
-    — support MDX expressions
-*   [`micromark-extension-mdx-jsx`][micromark-extension-mdx-jsx]
-    — support MDX JSX
-*   [`micromark-extension-mdx-md`][micromark-extension-mdx-md]
-    — turn some CommonMark features off
-*   [`micromark-extension-mdxjs-esm`][micromark-extension-mdxjs-esm]
-    — support MDX export/imports
+* [`micromark-extension-mdx-expression`][micromark-extension-mdx-expression]
+  — support MDX expressions
+* [`micromark-extension-mdx-jsx`][micromark-extension-mdx-jsx]
+  — support MDX JSX
+* [`micromark-extension-mdx-md`][micromark-extension-mdx-md]
+  — turn some CommonMark features off
+* [`micromark-extension-mdxjs-esm`][micromark-extension-mdxjs-esm]
+  — support MDX export/imports
 
 When you need a syntax tree, combine this package with
 [`mdast-util-mdx`][mdast-util-mdx].
@@ -126,8 +126,8 @@ Create an extension for `micromark` to enable MDX syntax.
 
 ###### Parameters
 
-*   `options` ([`Options`][api-options], optional)
-    — configuration; passed to all extensions
+* `options` ([`Options`][api-options], optional)
+  — configuration; passed to all extensions
 
 ###### Returns
 
@@ -150,28 +150,28 @@ See [`Options`][micromark-extension-mdx-expression-options].
 
 For recommendations on how to author MDX, see each corresponding readme:
 
-*   [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#authoring)
-*   [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#authoring)
-*   [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#authoring)
-*   [CommonMark features not in MDX](https://github.com/micromark/micromark-extension-mdx-md#authoring)
+* [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#authoring)
+* [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#authoring)
+* [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#authoring)
+* [CommonMark features not in MDX](https://github.com/micromark/micromark-extension-mdx-md#authoring)
 
 ## Syntax
 
 For info on the syntax of these features, see each corresponding readme:
 
-*   [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#syntax)
-*   [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#syntax)
-*   [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#syntax)
-*   CommonMark features not in MDX: n/a
+* [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#syntax)
+* [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#syntax)
+* [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#syntax)
+* CommonMark features not in MDX: n/a
 
 ## Errors
 
 For info on what errors are thrown, see each corresponding readme:
 
-*   [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#errors)
-*   [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#errors)
-*   [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#errors)
-*   CommonMark features not in MDX: n/a
+* [expressions](https://github.com/micromark/micromark-extension-mdx-expression/tree/main/packages/micromark-extension-mdx-expression#errors)
+* [JSX](https://github.com/micromark/micromark-extension-mdx-jsx#errors)
+* [ESM](https://github.com/micromark/micromark-extension-mdxjs-esm#errors)
+* CommonMark features not in MDX: n/a
 
 ## Types
 
@@ -196,12 +196,12 @@ This package is safe.
 
 ## Related
 
-*   [`micromark-extension-mdx`][micromark-extension-mdx]
-    — support MDX unaware of JS
-*   [`mdast-util-mdx`][mdast-util-mdx]
-    — support MDX in mdast
-*   [`remark-mdx`][remark-mdx]
-    — support MDX syntax in remark
+* [`micromark-extension-mdx`][micromark-extension-mdx]
+  — support MDX unaware of JS
+* [`mdast-util-mdx`][mdast-util-mdx]
+  — support MDX in mdast
+* [`remark-mdx`][remark-mdx]
+  — support MDX syntax in remark
 
 ## Contribute
 
